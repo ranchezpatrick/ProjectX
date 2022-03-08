@@ -5,7 +5,7 @@ class Ability
 
   def initialize(user)
 
-      if admin
+      if user.super_admin?
         can :manage, :all
       else
         can :read, :all

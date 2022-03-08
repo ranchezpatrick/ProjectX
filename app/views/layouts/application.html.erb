@@ -14,11 +14,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
+ 
+    <%= yield %>
     <% if can? :manage, @all %>
 
-    <%= link_to "Admin", rails_admin %>
+    <%= link_to "admin", rails_admin %>
     
     <% end %>
-    <%= yield %>
   </body>
 </html>
