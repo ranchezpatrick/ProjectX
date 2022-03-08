@@ -13,6 +13,12 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    
+    <% if can? :manage, @all %>
+
+    <%= link_to "Admin", rails_admin %>
+    
+    <% end %>
     <%= yield %>
   </body>
 </html>
